@@ -21,7 +21,7 @@ class Movie
     public $copertina;
     public $nome;
     public $durata;
-    public $Regista;
+    public $regista;
     public $annoPubblicazione;
 
     public function mostraInizialiRegista()
@@ -35,7 +35,20 @@ class Movie
 
         return strtoupper($primeLettere);
     }
+
+    function __construct($_copertina,$_nome,$_durata,$_regista,$_annoPubblicazione){
+        $this->copertina = $_copertina;
+        $this->nome = $_nome;
+        $this->durata = $_durata; 
+        $this->regista = $_regista;
+        $this->annoPubblicazione = $_annoPubblicazione;
+    }
+    {
+        
+    }
 }
+
+    
 
 ?>
 
