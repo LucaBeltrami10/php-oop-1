@@ -55,10 +55,11 @@ class Movie
     }
 }
 
-$ilPadrino = new Movie('no', 'Il Padrino', 175, 'Francis Ford Coppola', 1972);
-$titanic = new Movie('no', 'Titaic', 195, 'James Cameron', 1997);
-$matrix = new Movie('no', 'Matrix', 136, 'The Wachowskis', 1999);
-$laLaLand = new Movie('no', 'La La Land', 128, 'Damien Chazelle', 2016);
+
+$ilPadrino = new Movie('./img/ilPadrino.jpeg', 'Il Padrino', 175, 'Francis Ford Coppola', 1972);
+$titanic = new Movie('./img/titanic.jpeg', 'Titaic', 195, 'James Cameron', 1997);
+$matrix = new Movie('./img/matrix.jpeg', 'Matrix', 136, 'The Wachowskis', 1999);
+$laLaLand = new Movie('./img/laLaLand.jpeg', 'La La Land', 128, 'Damien Chazelle', 2016);
 
 $movies = [$ilPadrino, $titanic, $matrix, $laLaLand];
 
@@ -74,8 +75,7 @@ $movies = [$ilPadrino, $titanic, $matrix, $laLaLand];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-oop-1</title>
     <!-- boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -84,17 +84,17 @@ $movies = [$ilPadrino, $titanic, $matrix, $laLaLand];
         <main class="container">
             <div class="row">
                 <?php foreach ($movies as $movie) { ?>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?php echo $movie->copertina ?>" class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?php echo $movie->nome ?></h5>
+                                <p class="card-text">Durata: <?php echo $movie->durata ?> minuti</p>
+                                <p class="card-text">Autore: <?php echo $movie->regista ?></p>
+                                <p class="card-text">Anno: <?php echo $movie->annoPubblicazione ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
         </main>
