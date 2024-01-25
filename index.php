@@ -18,6 +18,23 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 
 class Movie
 {
+    public $copertina;
+    public $nome;
+    public $durata;
+    public $Regista;
+    public $annoPubblicazione;
+
+    public function mostraInizialiRegista()
+    {
+        $parole = explode(" ", $this->nome);
+        $primeLettere = "";
+
+        foreach ($parole as $parola) {
+            $primeLettere .= substr($parola, 0, 1) . '. ';
+        }
+
+        return strtoupper($primeLettere);
+    }
 }
 
 ?>
