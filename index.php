@@ -35,28 +35,34 @@ class Movie
 
         return strtoupper($primeLettere);
     }
+
     /**
      * Nuovo film
      *
-     * @param [type] $_copertina ULR copertina film
-     * @param [type] $_nome Nome film
-     * @param [type] $_durata Durata film
-     * @param [type] $_regista Regista film
-     * @param [type] $_annoPubblicazione Anno di pubblicazione del film
+     * @param [type] $_copertina /ULR copertina film
+     * @param [type] $_nome /Nome film
+     * @param [type] $_durata /Durata film
+     * @param [type] $_regista /Regista film
+     * @param [type] $_annoPubblicazione /Anno di pubblicazione del film
      */
-    function __construct($_copertina,$_nome,$_durata,$_regista,$_annoPubblicazione){
+    function __construct($_copertina, $_nome, $_durata, $_regista, $_annoPubblicazione)
+    {
         $this->copertina = $_copertina;
         $this->nome = $_nome;
-        $this->durata = $_durata; 
+        $this->durata = $_durata;
         $this->regista = $_regista;
         $this->annoPubblicazione = $_annoPubblicazione;
     }
-    {
-        
-    }
 }
 
-    
+$ilPadrino = new Movie('no', 'Il Padrino', 175, 'Francis Ford Coppola', 1972);
+$titanic = new Movie('no', 'Titaic', 195, 'James Cameron', 1997);
+$matrix = new Movie('no', 'Matrix', 136, 'The Wachowskis', 1999);
+$laLaLand = new Movie('no', 'La La Land', 128, 'Damien Chazelle', 2016);
+
+$movies = [$ilPadrino, $titanic, $matrix, $laLaLand];
+
+
 
 ?>
 
