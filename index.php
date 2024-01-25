@@ -35,7 +35,15 @@ class Movie
 
         return strtoupper($primeLettere);
     }
-
+    /**
+     * Nuovo film
+     *
+     * @param [type] $_copertina ULR copertina film
+     * @param [type] $_nome Nome film
+     * @param [type] $_durata Durata film
+     * @param [type] $_regista Regista film
+     * @param [type] $_annoPubblicazione Anno di pubblicazione del film
+     */
     function __construct($_copertina,$_nome,$_durata,$_regista,$_annoPubblicazione){
         $this->copertina = $_copertina;
         $this->nome = $_nome;
