@@ -14,7 +14,13 @@ mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi i
 organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
  -->
 
-<?php ?>
+<?php
+
+class Movie
+{
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
